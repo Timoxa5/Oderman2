@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Меню - Oderman</title>
+</head>
+<body>
+<header>
+    <h1>Меню піцерії Oderman</h1>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>Назва піци</th>
+            <th>Опис інгредієнтів</th>
+            <th>Ціна</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for pizza in pizzas %}
+        <tr>
+            <td>{{ pizza.name }}</td>
+            <td>{{ pizza.description }}</td>
+            <td>{{ pizza.price }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</main>
+</body>
+</html>>
